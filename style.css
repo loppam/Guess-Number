@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  text-align: center;
 }
 
 html {
@@ -10,9 +11,8 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
+  font-family: "Press Start 2P", sans-serif;
   color: #eee;
-  height: 100vh;
   background-color: #222;
   display: flex;
   justify-content: space-around;
@@ -41,12 +41,12 @@ body {
 .btn:hover {
   background-color: #ccc;
 }
-.center{
+.center {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
-hr{
+hr {
   width: 100%;
   margin-top: -70px;
   background-color: #eee;
@@ -54,6 +54,11 @@ hr{
   height: 10px;
 }
 .message {
+  margin-bottom: 8rem;
+  height: 3rem;
+  font-size: 4rem;
+}
+.label-remark {
   margin-bottom: 8rem;
   height: 3rem;
   font-size: 4rem;
@@ -85,7 +90,7 @@ h1 {
   align-items: center;
 }
 main {
-  margin-top: 60px;
+  margin-top: 10rem;
   display: flex;
   justify-content: space-around;
 }
@@ -200,10 +205,10 @@ h1 {
   margin-bottom: 2rem;
 } */
 @media (max-width: 750px) {
-  main{
+  main {
     flex-direction: column;
   }
-  .left{
+  .left {
     justify-content: center;
     align-items: center;
     margin-top: 20px;
