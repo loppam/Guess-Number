@@ -1,8 +1,7 @@
 let number = Math.trunc(Math.random() * 20) + 1;
-console.log(number);
 let score = 20;
 let highscore = 0;
-
+console.log(number);
 const displayMessage = (message) => {
   document.querySelector(".message").textContent = message;
 };
@@ -14,8 +13,8 @@ document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
   // When there is no input or zero
   if (!guess) {
-    displayMessage("⛔️ No Number!");
     document.querySelector(".score").textContent = 0;
+    displayMessage("⛔️ No Number!");
     displayRemark("You need put number na");
   }
   // When Guess is correct
@@ -42,8 +41,9 @@ document.querySelector(".check").addEventListener("click", function () {
       document.querySelector(".score").textContent = 0;
     }
   }
+
   //Abusive Comments🤭🤭🤭
-  if (score == 20) {
+  if (score < 19) {
     displayRemark("😎 Agba Baller");
   }
   if (score == 19) {
@@ -70,6 +70,10 @@ document.querySelector(".check").addEventListener("click", function () {
   if (score <= 9) {
     displayRemark("😭OLODO😭");
   }
+
+  if (guess == number) {
+    displayRemark("Hmm...");
+  }
 });
 
 document.querySelector(".again").addEventListener("click", () => {
@@ -82,5 +86,4 @@ document.querySelector(".again").addEventListener("click", () => {
   displayRemark("Hmm...");
   score = 20;
   number = Math.trunc(Math.random() * 20) + 1;
-  console.log(number);
 });
