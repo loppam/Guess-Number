@@ -1,7 +1,26 @@
 let number = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
+const overlay = document.querySelector(".overlay");
+const howTo = document.querySelector(".howto");
+const infoBtn = document.querySelector(".info");
+const closeHowTo = document.querySelector(".close-howto");
 console.log(number);
+
+infoBtn.addEventListener("click", () => {
+  overlay.classList.remove("hidden");
+  howTo.classList.remove("hidden");
+});
+closeHowTo.addEventListener("click", () => {
+  overlay.classList.add("hidden");
+  howTo.classList.add("hidden");
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === 'Escape' && !howTo.classList.contains('hidden')){
+    overlay.classList.add("hidden");
+    howTo.classList.add("hidden");
+  }
+});
 const displayMessage = (message) => {
   document.querySelector(".message").textContent = message;
 };
