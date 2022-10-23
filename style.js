@@ -16,11 +16,12 @@ closeHowTo.addEventListener("click", () => {
   howTo.classList.add("hidden");
 });
 document.addEventListener("keydown", (e) => {
-  if (e.key === 'Escape' && !howTo.classList.contains('hidden')){
+  if (e.key === "Escape" && !howTo.classList.contains("hidden")) {
     overlay.classList.add("hidden");
     howTo.classList.add("hidden");
   }
 });
+
 const displayMessage = (message) => {
   document.querySelector(".message").textContent = message;
 };
@@ -28,7 +29,7 @@ const displayRemark = (remark) => {
   document.querySelector(".label-remark").textContent = remark;
 };
 
-document.querySelector(".check").addEventListener("click", function () {
+function confirm() {
   const guess = Number(document.querySelector(".guess").value);
   // When there is no input or zero
   if (!guess) {
@@ -92,6 +93,15 @@ document.querySelector(".check").addEventListener("click", function () {
 
   if (guess == number) {
     displayRemark("Hmm...");
+  }
+}
+
+document.querySelector(".check").addEventListener("click", function () {
+  confirm();
+});
+document.addEventListener("keydown", (f) => {
+  if (f.key === "Enter") {
+    confirm();
   }
 });
 
