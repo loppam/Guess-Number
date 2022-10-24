@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Guess My Number</title>
   </head>
@@ -11,8 +15,11 @@
     <header>
       <div class="flex">
         <button class="btn again">Again!</button>
-        <p class="between">(Between 1 and 20)</p>
-        <button class="info">?</button>
+        <p class="between">(Between 1 and <span class="setLimit">?</span>)</p>
+        <div class="column">
+          <button class="info">?</button>
+          <i class="fas fa-cog fa-spin"></i>
+        </div>
       </div>
       <h1>Guess My Number</h1>
       <div class="center"><div class="number">?</div></div>
@@ -48,6 +55,15 @@
         <li>be sure to have fun</li>
       </ul>
     </div>
+    <div class="setting">
+      <button class="close-setting">&times;</button>
+      <h1 class="instructions">Set Limit</h1>
+      <div class="row">
+        <input type="number" class="limit" />
+        <button class="btn set">set!</button>
+      </div>
+    </div>
+    <div class="overlay"></div>
     <div class="overlay hidden"></div>
     <script src="./style.js"></script>
   </body>

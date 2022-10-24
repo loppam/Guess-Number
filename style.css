@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Gugi&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Gugi&family=Press+Start+2P&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ body {
   background-color: #eee;
   color: #222;
   font-size: 2rem;
-  font-family: 'Press Start 2P', open-sans;
+  font-family: "Press Start 2P", open-sans;
   padding: 2rem 3rem;
   cursor: pointer;
 }
@@ -63,7 +63,7 @@ hr {
   margin-bottom: 8rem;
   height: 3rem;
   font-size: 4rem;
-  font-family: 'Gugi', serif;
+  font-family: "Gugi", serif;
 }
 
 .label-score {
@@ -107,7 +107,12 @@ main {
   display: flex;
   flex-direction: column;
 }
-.info{
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.info {
   background-color: #333;
   border-radius: 20px;
   border-style: dotted;
@@ -115,6 +120,21 @@ main {
   padding: 10px 20px;
   color: white;
   font-size: 20px;
+}
+.fas {
+  background-color: #333;
+  border-radius: 40px;
+  border-style: dotted;
+  border-color: white;
+  padding: 20px 20px;
+  color: white;
+  font-size: 20px;
+}
+.row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .guess {
   background: none;
@@ -128,6 +148,16 @@ main {
   display: block;
   margin-bottom: 3rem;
 }
+.limit {
+  background: none;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  width: 70%;
+  text-align: center;
+  /* margin-bottom: 3rem; */
+}
 .overlay {
   position: fixed;
   top: 0;
@@ -139,11 +169,11 @@ main {
   z-index: 5;
 }
 
-.hidden{
+.hidden {
   display: none;
-  
 }
-.close-howto {
+.close-howto,
+.close-setting {
   position: absolute;
   top: 1.2rem;
   right: 2rem;
@@ -154,7 +184,8 @@ main {
   background: none;
   transition: 1s ease-in;
 }
-.howto {
+.howto,
+.setting {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -168,7 +199,7 @@ main {
   backdrop-filter: blur(3px);
   z-index: 10;
 }
-.instructions{
+.instructions {
   text-align: center;
   text-transform: uppercase;
   text-decoration: underline;
@@ -177,17 +208,17 @@ main {
   font-size: 2.5rem;
   line-height: 40px;
 }
-.instructions-par{
+.instructions-par {
   text-align: center;
   text-transform: capitalize;
   text-align: center;
   font-size: 2rem;
   margin-bottom: 20px;
 }
-.instructions-list{
+.instructions-list {
   font-size: 1.5rem;
   list-style-type: square;
-  font-family: 'Gugi', serif;
+  font-family: "Gugi", serif;
   text-transform: capitalize;
   /* list-style-position: inside; */
 }
