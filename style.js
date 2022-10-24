@@ -33,14 +33,12 @@ document.addEventListener("keydown", (e) => {
     setting.classList.add("hidden");
   }
 });
+console.log("Wetin you find come here, OLE, guess jare.");
 document.querySelector(".set").addEventListener("click", () => {
   const limit = Number(document.querySelector(".limit").value);
-  console.log(limit);
-  // console.log(Math.trunc(Math.random() * limit) + 1);
   document.querySelector(".setLimit").textContent = limit;
 
   let number = Math.trunc(Math.random() * limit) + 1;
-  console.log(number);
   let score = 20;
   let highscore = 0;
 
