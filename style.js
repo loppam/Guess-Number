@@ -37,6 +37,7 @@ console.log("Wetin you find come here, OLE, guess jare.");
 document.querySelector(".set").addEventListener("click", () => {
   const limit = Number(document.querySelector(".limit").value);
   document.querySelector(".setLimit").textContent = limit;
+  alert(`Limit set to ${limit}`)
 
   let number = Math.trunc(Math.random() * limit) + 1;
   let score = 20;
